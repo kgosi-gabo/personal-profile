@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+#contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #007bff;
+}
