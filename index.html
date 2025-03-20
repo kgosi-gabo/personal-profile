@@ -12,6 +12,10 @@
             background-color: #121212;
             color: #f1f1f1;
         }
+        body.light-mode {
+            background-color: #fff;
+            color: #333;
+        }
         .navbar-dark.bg-dark {
             background-color: #333 !important;
         }
@@ -22,9 +26,16 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
+        section {
+            margin-bottom: 50px; /* Space out each section */
+        }
+        section h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
     </style>
 </head>
-<body>
+<body class="light-mode">
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -73,65 +84,53 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm a passionate programmer who loves turning ideas into reality through code. With a great sense of humor, I believe that life is best enjoyed when you can find laughter in every moment. Beyond coding, football has been a big part of my life since childhood, thanks to my brother, who introduced me to the game at a young age. My ultimate goal is to excel in the corporate world, specializing in Data Analytics for major organizations. If you're up for a chat about programming, football, or just a good laugh, let's connect! 🚀.</p>
-        </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate programmer who loves turning ideas into reality through code. With a great sense of humor, I believe that life is best enjoyed when you can find laughter in every moment. Beyond coding, football has been a big part of my life since childhood, thanks to my brother, who introduced me to the game at a young age. My ultimate goal is to excel in the corporate world, specializing in Data Analytics for major organizations. If you're up for a chat about programming, football, or just a good laugh, let's connect! 🚀.</p>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-light py-5">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>Data Cleaning</li>
-                <li>Football (Teamwork, Strategy)</li>
-                <li>Cooking (Creative Problem Solving)</li>
-            </ul>
-        </div>
+    <section id="skills" class="bg-light">
+        <h2>Skills</h2>
+        <ul>
+            <li>Data Cleaning</li>
+            <li>Football (Teamwork, Strategy)</li>
+            <li>Cooking (Creative Problem Solving)</li>
+        </ul>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-5">
-        <div class="container">
-            <h2>Education</h2>
-            <p>I'm studying <strong>Business Intelligence and Data Analytics</strong>, focusing on data visualization, predictive analytics, and business strategy. I enjoy tackling real-world data challenges, honing my skills through projects and coding. Passionate about problem-solving, I'm eager to leverage data to drive business success!.</p>
-        </div>
+    <section id="education">
+        <h2>Education</h2>
+        <p>I'm studying <strong>Business Intelligence and Data Analytics</strong>, focusing on data visualization, predictive analytics, and business strategy. I enjoy tackling real-world data challenges, honing my skills through projects and coding. Passionate about problem-solving, I'm eager to leverage data to drive business success!.</p>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-light py-5">
-        <div class="container">
-            <h2>Projects</h2>
-            <p>Here are a few projects I have worked on:</p>
-            <ul>
-                <li><strong>Project 1:</strong> Data Cleaning, Power BI, Cleansed unstructured data</li>
-                <li><strong>Project 2:</strong> Web Programming, Notepad++, A Program</li>
-                <li><strong>Project 3:</strong> Web Development, VsCode, A website</li>
-            </ul>
-        </div>
+    <section id="projects" class="bg-light">
+        <h2>Projects</h2>
+        <p>Here are a few projects I have worked on:</p>
+        <ul>
+            <li><strong>Project 1:</strong> Data Cleaning, Power BI, Cleansed unstructured data</li>
+            <li><strong>Project 2:</strong> Web Programming, Notepad++, A Program</li>
+            <li><strong>Project 3:</strong> Web Development, VsCode, A website</li>
+        </ul>
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications" class="py-5">
-        <div class="container">
-            <h2>Certifications</h2>
-            <p>Here are some certifications I have completed:</p>
-            <ul>
-                <li><strong>Certification 1:</strong> PSLE, Pule Memorial School, 14/10/2018.</li>
-                <li><strong>Certification 2:</strong> JCE, Naresereto Junior Secondary School, 21/11/2021</li>
-                <li><strong>Certification 3:</strong> BGCSE, Gaborone Senior Secondary School, 09/12/2023</li>
-            </ul>
-        </div>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <p>Here are some certifications I have completed:</p>
+        <ul>
+            <li><strong>Certification 1:</strong> PSLE, Pule Memorial School, 14/10/2018.</li>
+            <li><strong>Certification 2:</strong> JCE, Naresereto Junior Secondary School, 21/11/2021</li>
+            <li><strong>Certification 3:</strong> BGCSE, Gaborone Senior Secondary School, 09/12/2023</li>
+        </ul>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-dark text-white py-5">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Contact me at <a href="mailto:gaboinewekgosi@gmail.com" class="text-white">gaboinewekgosi@gmail.com</a></p>
-        </div>
+    <section id="contact" class="bg-dark text-white">
+        <h2>Contact</h2>
+        <p>Contact me at <a href="mailto:gaboinewekgosi@gmail.com" class="text-white">gaboinewekgosi@gmail.com</a></p>
     </section>
 
     <!-- Bootstrap JS and dependencies -->
@@ -146,6 +145,7 @@
 
         darkModeToggle.addEventListener("click", function() {
             document.body.classList.toggle("dark-mode");
+            document.body.classList.toggle("light-mode");
 
             // Toggle icons visibility
             sunIcon.classList.toggle("d-none");
