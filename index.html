@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+        .navbar-dark.bg-dark {
+            background-color: #333 !"important";
+        }
+        .navbar-light .navbar-toggler-icon {
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
-
 <body>
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -36,16 +47,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light" id="darkModeToggle">Switch Dark Mode</button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero text-center" style="background-color: #333; color: white; padding: 50 px;">
-        <img src="shared image.jpg" alt="Profile" class="rounded-circle mb-3" style="width: 150 px; height: 150 px;">
+    <section class="hero text-center" style="background-color: #333; color: white; padding: 50px;">
+        <img src="shared image.jpg" alt="Profile" class="rounded-circle mb-3" style="width: 150px; height: 150px;">
         <h1>Kgosi Gaboinewe</h1>
-        <p>Cool, Calm and Coolected.</p>
+        <p>Cool, Calm and Collected.</p>
     </section>
 
     <!-- About Section -->
@@ -61,9 +75,9 @@
         <div class="container">
             <h2>Skills</h2>
             <ul>
-                <li>Cleaning</li>
-                <li>Footballer</li>
-                <li>Cooking</li>
+                <li>Data Cleaning</li>
+                <li>Football (Teamwork, Strategy)</li>
+                <li>Cooking (Creative Problem Solving)</li>
             </ul>
         </div>
     </section>
@@ -72,7 +86,7 @@
     <section id="education" class="py-5">
         <div class="container">
             <h2>Education</h2>
-            <p>I'm studying **Business Intelligence and Data Analytics**, focusing on data visualization, predictive analytics, and business strategy. I enjoy tackling real-world data challenges, honing my skills through projects and coding. Passionate about problem-solving, I'm eager to leverage data to drive business success!.</p>
+            <p>I'm studying <strong>Business Intelligence and Data Analytics</strong>, focusing on data visualization, predictive analytics, and business strategy. I enjoy tackling real-world data challenges, honing my skills through projects and coding. Passionate about problem-solving, I'm eager to leverage data to drive business success!.</p>
         </div>
     </section>
 
@@ -82,15 +96,9 @@
             <h2>Projects</h2>
             <p>Here are a few projects I have worked on:</p>
             <ul>
-                <li>
-                    <strong>Project 1:</strong>Data Cleaning, Power BI, Cleansed unstructured data
-                </li>
-                <li>
-                    <strong>Project 2:</strong>Web Programming, Notepad++, A Program
-                </li>
-                <li>
-                    <strong>Project 3:</strong> Web Developng, VsCode, A website
-                </li>
+                <li><strong>Project 1:</strong> Data Cleaning, Power BI, Cleansed unstructured data</li>
+                <li><strong>Project 2:</strong> Web Programming, Notepad++, A Program</li>
+                <li><strong>Project 3:</strong> Web Development, VsCode, A website</li>
             </ul>
         </div>
     </section>
@@ -101,15 +109,9 @@
             <h2>Certifications</h2>
             <p>Here are some certifications I have completed:</p>
             <ul>
-                <li>
-                    <strong>Certification 1:</strong> PSLE, Pule Memorial School, 14/10/2018.
-                </li>
-                <li>
-                    <strong>Certification 2:</strong> JCE, Naresereto Junior Secondary School, 21/11/2021
-                </li>
-                <li>
-                    <strong>Certification 3:</strong> BGCSE, Gaborone Senior Secondary School, 09/12/2023
-                </li>
+                <li><strong>Certification 1:</strong> PSLE, Pule Memorial School, 14/10/2018.</li>
+                <li><strong>Certification 2:</strong> JCE, Naresereto Junior Secondary School, 21/11/2021</li>
+                <li><strong>Certification 3:</strong> BGCSE, Gaborone Senior Secondary School, 09/12/2023</li>
             </ul>
         </div>
     </section>
@@ -118,13 +120,21 @@
     <section id="contact" class="bg-dark text-white py-5">
         <div class="container">
             <h2>Contact</h2>
-            <p>Contact me at <a href="mailto:-gaboinewekgosi@gmail.com" class="text-white">your-gaboinewekgosi8@gmail.com</a></p>
+            <p>Contact me at <a href="mailto:gaboinewekgosi@gmail.com" class="text-white">gaboinewekgosi@gmail.com</a></p>
         </div>
     </section>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-</body>
 
+    <script>
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById("darkModeToggle");
+
+        darkModeToggle.addEventListener("click", "function"() {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
 </html>
